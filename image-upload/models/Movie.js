@@ -3,6 +3,9 @@ const Schema = mongoose.Schema;
 const movieSchema = new Schema({
 	title: String,
 	description: String,
+	imgPath: String,
+	imgName: String,
+	publicId: String
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
