@@ -1,4 +1,5 @@
-const { uploader, cloudinary } = require('../config/cloudinary');
+const router = require("express").Router();
+const Movie = require('../models/Movie');
 
 router.get("/", (req, res, next) => {
   Movie.find()
@@ -12,7 +13,7 @@ router.get('/movie/add', (req, res, next) => {
   res.render('movie-add');
 });
 
-router.post('/movie/add', uploader.single('poster'), (req, res, next) => {
+router.post('/movie/add', (req, res, next) => {
   // todo
 });
 
